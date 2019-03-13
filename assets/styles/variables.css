@@ -1,0 +1,10 @@
+@import './material.css';
+
+:root {
+    --primary: var(--green800);
+    --secondary: var(--amber700);
+    --dark: var(--gray900);
+    --light: var(--gray50);
+    --text-primary: var(--gray900);
+    --text-alt: var(--gray50);
+}
