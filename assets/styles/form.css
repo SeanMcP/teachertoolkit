@@ -1,0 +1,14 @@
+label > * {
+    display: block;
+}
+
+label > span {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+input {
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0.5rem;
+}
