@@ -43,12 +43,7 @@
 }
 
 .Settings__toggle {
-    position: absolute;
-    top: 0;
     bottom: 0;
-    left: 100%;
-}
-
-.Settings__toggle > * {
-    transform: rotate(-90deg);
+    position: absolute;
+    width: 100%;
 }

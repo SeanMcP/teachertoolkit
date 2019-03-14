@@ -57,5 +57,10 @@ function displayErrorOn(id) {
 
 generateTable();
 
+function toggleSettings() {
+    var el = document.querySelector('.Settings');
+    el.classList.toggle('--hidden');
+}
+
 problemsInput.addEventListener('change', generateTable);
 placesInput.addEventListener('change', generateTable);
