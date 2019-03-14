@@ -7,34 +7,31 @@
     <title>Easy Grader - TeacherToolkit.org</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="../assets/styles/main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./styles.css">
 </head>
 
 <body>
     <div class="App">
-        <aside>
-            <h1>Easy Grader</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nisi ipsam, consequuntur dignissimos ullam
-                incidunt cumque voluptatum laborum, exercitationem fuga accusamus, cum odio natus ea ducimus. Quisquam
-                cum
-                saepe eveniet!</p>
-            <label id="problemsLabel">
-                <span>Number of problems</span>
-                <input type="number" id="problemsInput" value="17" min="1" max="2000">
-            </label>
-            <label id="placesLabel">
-                <span>Number of decimal places</span>
-                <input type="number" id="placesInput" value="2" min="0" max="20">
-            </label>
+        <aside class="Settings">
+            <div class="Settings__content-container">
+                <h1>Easy Grader</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <label id="problemsLabel" class="Settings__label">
+                    <span>Number of problems</span>
+                    <input type="number" id="problemsInput" value="17" min="1" max="2000">
+                </label>
+                <label id="placesLabel" class="Settings__label">
+                    <span>Number of decimal places</span>
+                    <input type="number" id="placesInput" value="2" min="0" max="20">
+                </label>
+                <footer class="Settings__footer">© TeacherToolkit.org</footer>
+            </div>
+            <button class="Settings__toggle"><div>Hide panel</div></button>
         </aside>
         <main id="mainContent">
             <ul id="outputList"></ul>
         </main>
     </div>
-    <footer class="Block">
-        <div class="ContentContainer">
-            <p>© TeacherToolkit.org</p>
-        </div>
-    </footer>
     <script src="./main.js"></script>
 </body>
 

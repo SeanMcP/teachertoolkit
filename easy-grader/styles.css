@@ -1,0 +1,54 @@
+.App {
+    display: flex;
+    min-height: 100vh;
+}
+
+.Settings {
+    background: var(--blue900);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    max-width: 360px;
+    padding: 1rem 0;
+    position: relative;
+}
+
+.Settings__content-container {
+    flex: 1;
+    margin: 0 1rem;
+    position: relative;
+}
+
+.Settings__label {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+}
+
+.Settings__label input {
+    /* Fix for Firefox */
+    width: calc(100% - 1.5rem);
+}
+
+.Settings__label + .Settings__label {
+    margin-top: 1rem;
+}
+
+.Settings__footer {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+}
+
+.Settings__toggle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+}
+
+.Settings__toggle > * {
+    transform: rotate(-90deg);
+}
