@@ -3,9 +3,22 @@ var problemsInput = document.getElementById('problemsInput');
 var placesInput = document.getElementById('placesInput');
 
 function generateTable() {
-    clearTable();
+    clearErrors();
+    var isError = false;
     var problems = problemsInput.value;
     var places = placesInput.value;
+    if (problems.length === 0) {
+        displayErrorOn('problemsLabel');
+        isError = true;
+    }
+    if (places.length === 0) {
+        displayErrorOn('placesLabel')
+        isError = true;
+    }
+    if (isError) {
+        return;
+    }
+    clearTable();
     for (var i = 0; i <= problems; i++) {
         var value = problems - i;
         var li = document.createElement('li');
@@ -26,6 +39,20 @@ function clearTable() {
     while (outputList.firstChild) {
         outputList.removeChild(outputList.firstChild);
     }
+}
+
+function clearErrors() {
+    document.querySelectorAll('.ErrorMessage').forEach(node => node.remove());
+    document.querySelectorAll('.--has-error').forEach(node => node.classList.remove('--has-error'));
+}
+
+function displayErrorOn(id) {
+    var el = document.getElementById(id);
+    el.classList.add('--has-error');
+    var p = document.createElement('p')
+    p.classList.add('ErrorMessage');
+    p.textContent = 'Uh oh! This value must be a valid number.';
+    el.appendChild(p);
 }
 
 generateTable();
