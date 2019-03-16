@@ -31,6 +31,24 @@ body {
     padding: 1rem 0;
 }
 
+.Tag {
+    border-radius: 0.125rem;
+    font-size: 50%;
+    padding: 0 0.25rem;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.Tag--alpha {
+    background: var(--orange800);
+    color: black;
+}
+
+.Tag--beta {
+    background: var(--primary);
+    color: white;
+}
+
 .Main {
     flex: 1;
 }
