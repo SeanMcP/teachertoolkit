@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="styles.css">
 </head>
 
-<body>
+<body id="top">
     <div class="App">
         <aside class="Settings">
             <div class="Settings__content-container">
@@ -25,12 +25,13 @@
                     <span>Number of decimal places</span>
                     <input type="number" id="placesInput" value="2" min="0" max="20">
                 </label>
-                <footer class="Settings__footer">© TeacherToolkit.org</footer>
+                <footer class="Attribution --mobile-hidden">© TeacherToolkit.org</footer>
             </div>
-            <button class="Settings__toggle" onclick="toggleSettings()">Toggle panel</button>
         </aside>
         <main id="mainContent" class="Main">
             <ul id="outputList" class="GradeList"></ul>
+            <a href="#top" class="ToTop --desktop-hidden">Back to top</a>
+            <footer class="Attribution --desktop-hidden">© TeacherToolkit.org</footer>
         </main>
     </div>
     <script src="/register.js"></script>

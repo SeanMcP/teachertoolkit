@@ -8,15 +8,24 @@
     color: white;
     display: flex;
     flex-direction: column;
-    max-width: 360px;
-    padding: 1rem 0;
-    position: relative;
+    padding: 2rem 0;
+    width: 360px;
+}
+
+.Settings h1 {
+    margin-bottom: 0;
 }
 
 .Settings__content-container {
+    display: flex;
     flex: 1;
-    margin: 0 1rem;
+    flex-direction: column;
+    margin: 0 2rem;
     position: relative;
+}
+
+.Settings__content-container > *:first-child {
+    margin-top: 0;
 }
 
 .Settings__label {
@@ -34,18 +43,10 @@
     margin-top: 1rem;
 }
 
-.Settings__footer {
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    right: 0;
+.Attribution {
+    margin-top: auto;
+    padding-top: 2rem;
     text-align: center;
-}
-
-.Settings__toggle {
-    bottom: 0;
-    position: absolute;
-    width: 100%;
 }
 
 .Main {
@@ -54,6 +55,10 @@
     flex: 1;
     max-height: 100vh;
     overflow-y: auto;
+}
+
+.Main .Attribution {
+    padding-bottom: 2rem;
 }
 
 .GradeList {
@@ -84,4 +89,51 @@
 
 .GradeList__percent {
     font-weight: bold;
+}
+
+.ToTop {
+    background: var(--blue900);
+    border-radius: 0.25rem;
+    bottom: 2rem;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+    color: white;
+    padding: 1rem;
+    position: fixed;
+    text-decoration: none;
+    right: 2rem;
+}
+
+.ToTop:hover {
+    background: var(--blue700);
+}
+
+.--desktop-hidden {
+    display: none;
+}
+
+.--mobile-hidden {
+    display: block;
+}
+
+@media screen and (max-width: 700px) {
+    .App {
+        flex-direction: column;
+    }
+
+    .Settings {
+        max-width: initial;
+        width: 100%;
+    }
+
+    .Main {
+        max-height: initial;
+    }
+
+    .--desktop-hidden {
+        display: block;
+    }
+    
+    .--mobile-hidden {
+        display: none;
+    }
 }
