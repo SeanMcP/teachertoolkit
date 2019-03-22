@@ -20,15 +20,15 @@ body {
     max-width: 1000px;
 }
 
-@media screen and (max-width: calc(1000px + 2rem)) {
+@media screen and (max-width: calc(1000px + 4rem)) {
     .ContentContainer {
-        margin: 0 1rem;
+        margin: 0 2rem;
         max-width: initial;
     }
 }
 
 .Block {
-    padding: 1rem 0;
+    padding: 2rem 0;
 }
 
 .Tag {
@@ -49,12 +49,17 @@ body {
     color: white;
 }
 
+.Header {
+    border-bottom: 1px solid var(--gray300);
+    text-align: center;
+}
+
 .Main {
     flex: 1;
 }
 
 .Card {
-    border: 1px solid silver;
+    border: 1px solid var(--gray300);
     border-radius: 0.25rem;
     padding: 1rem;
 }
@@ -68,7 +73,7 @@ body {
 }
 
 a.Card {
-    color: #222222;
+    color: var(--text-primary);
     text-decoration: none;
 }
 
