@@ -8,6 +8,8 @@ label > span {
 }
 
 input {
+    border-radius: var(--slight-radius);
+    border: 1px solid var(--gray100);
     font-family: inherit;
     font-size: inherit;
     padding: 0.5rem;

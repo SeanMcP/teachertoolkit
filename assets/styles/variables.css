@@ -7,4 +7,6 @@
     --light: var(--gray50);
     --text-primary: var(--gray900);
     --text-alt: var(--gray50);
+    --radius: 0.5rem;
+    --slight-radius: 0.25rem;
 }
