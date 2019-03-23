@@ -36,7 +36,12 @@
 
 .Settings__label input {
     /* Fix for Firefox */
-    width: calc(100% - 1.5rem);
+    width: calc(100% - 1rem);
+}
+
+.Settings__label input:focus, .ToTop:focus {
+    box-shadow: 0 0 0 2px var(--amber600);
+    outline: none;
 }
 
 .Settings__label + .Settings__label {
@@ -94,13 +99,13 @@
 .ToTop {
     background: var(--blue900);
     border-radius: var(--slight-radius);
-    bottom: 2rem;
+    bottom: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
     color: white;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     position: fixed;
     text-decoration: none;
-    right: 2rem;
+    right: 1rem;
 }
 
 .ToTop:hover {
