@@ -6,13 +6,6 @@ function captureInput(event) {
 
     if (key === 'Backspace') {
         var value = unformatAsString(timeInput.value);
-        // for (var i = value.length - 1; i >= 0; i++) {
-        //     if (value[i] !== '0') {
-        //         value = value.slice(0, i) + '0' + value.slice(i + 1);
-        //         // value[i] = '0';
-        //         break;
-        //     }
-        // }
         value = '0' + value.slice(0, value.length - 1);
         timeInput.value = formatTimeString(value);
     }
