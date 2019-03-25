@@ -1,4 +1,7 @@
 var timeInput = document.getElementById('time-input');
+var startButton = document.getElementById('start');
+
+var timer, timerValue;
 
 function captureInput(event) {
     event.preventDefault();
@@ -18,16 +21,14 @@ function captureInput(event) {
 }
 
 function formatTimeString(str) {
-    var hours = str.slice(0, 2),
-        minutes = str.slice(2, 4),
-        seconds = str.slice(4, 6);
+    var split = splitTimeString(str);
 
     return (
-        forceTwoDigits(hours) +
+        forceTwoDigits(split.hours) +
         'h ' +
-        forceTwoDigits(minutes) +
+        forceTwoDigits(split.minutes) +
         'm ' +
-        forceTwoDigits(seconds) +
+        forceTwoDigits(split.seconds) +
         's'
     );
 }
@@ -44,4 +45,35 @@ function unformatAsString(str) {
     return str.replace(/[a-z] ?/g, '');
 }
 
+function splitTimeString(str) {
+    return {
+        hours: str.slice(0, 2),
+        minutes: str.slice(2, 4),
+        seconds: str.slice(4, 6)
+    };
+}
+
+function convertTimeStringToMs(formatted) {
+    var str = unformatAsString(formatted);
+    var split = splitTimeString(str);
+
+    return (
+        split.hours * 3.6 * 1000000 +
+        split.minutes * 6 * 10000 +
+        split.seconds * 1000
+    );
+}
+
+function startTimer() {
+    var inputValue = timeInput.value;
+    timerValue = convertTimeStringToMs(inputValue);
+    console.log(timerValue);
+
+    timer = setTimeout(function() {
+        timerValue -= 1000;
+        console.log(timerValue);
+    }, 1000);
+}
+
 timeInput.addEventListener('keydown', captureInput);
+startButton.addEventListener('click', startTimer);
