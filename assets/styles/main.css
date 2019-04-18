@@ -1,4 +1,5 @@
 @import './variables.css';
+@import './headings.css';
 @import './form.css';
 @import './grid.css';
 @import './typography.css';
@@ -12,7 +13,7 @@ body {
     margin: 0;
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .ContentContainer {
@@ -64,11 +65,13 @@ body {
     padding: 1rem;
 }
 
-.Card > *:first-child, .ContentContainer > *:first-child {
+.Card>*:first-child,
+.ContentContainer>*:first-child {
     margin-top: 0;
 }
 
-.Card > *:last-child, .ContentContainer > *:last-child {
+.Card>*:last-child,
+.ContentContainer>*:last-child {
     margin-bottom: 0;
 }
 
@@ -77,7 +80,8 @@ a.Card {
     text-decoration: none;
 }
 
-a.Card:focus, a.Card:hover {
+a.Card:focus,
+a.Card:hover {
     border-color: dodgerblue;
     box-shadow: 0 0 0 4px dodgerblue;
     outline: none;
