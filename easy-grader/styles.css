@@ -54,6 +54,23 @@
     text-align: center;
 }
 
+.Attribution a {
+    text-decoration: none;
+}
+
+.Attribution a:hover,
+.Attribution a:focus {
+    text-decoration: underline;
+}
+
+.Attribution.--desktop-hidden a {
+    color: var(--text-primary);
+}
+
+.Attribution.--mobile-hidden a {
+    color: white;
+}
+
 .Main {
     --background: var(--gray200);
     background: var(--background);
