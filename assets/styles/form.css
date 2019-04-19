@@ -14,3 +14,8 @@ input {
     font-size: inherit;
     padding: 0.5rem;
 }
+
+label.Checkbox > * {
+    display: inline;
+    vertical-align: middle;
+}
