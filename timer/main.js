@@ -2,8 +2,12 @@ var timeInput = document.getElementById('time-input')
 var clearButton = document.getElementById('clear')
 var startButton = document.getElementById('start')
 var stopButton = document.getElementById('stop')
+var timerNode = document.getElementById('timer')
+var toggleFullscreenButton = document.getElementById('toggle-fullscreen')
 
-var isDone, timer, timerValue
+var isDone, isFullscreen, timer, timerValue
+
+timerNode.textContent = timeInput.value
 
 function captureInput(event) {
     event.preventDefault()
@@ -84,10 +88,10 @@ function convertTimeStringToMs(formatted) {
 }
 
 function runTimer() {
-    timerValue -= 1000
-    timeInput.value = formatTimeNumberAsString(timerValue)
+    timerValue = timerValue > 0 ? timerValue - 1000 : 0
+    timerNode.textContent = formatTimeNumberAsString(timerValue)
 
-    if (timerValue === 0) {
+    if (timerValue <= 0) {
         clearInterval(timer)
         isDone = true
     }
@@ -97,7 +101,9 @@ function startTimer() {
     isDone = false
     var inputValue = timeInput.value
     timerValue = convertTimeStringToMs(inputValue)
-    timeInput.value = formatTimeNumberAsString(timerValue)
+    var formattedTime = formatTimeNumberAsString(timerValue)
+    timeInput.value = formattedTime
+    timerNode.textContent = formattedTime
 
     timer = setInterval(runTimer, 1000)
 }
@@ -109,10 +115,21 @@ function stopTimer() {
 function clearTimer() {
     stopTimer()
     timerValue = 0
-    timeInput.value = formatTimeNumberAsString(timerValue)
+    var formattedTime = formatTimeNumberAsString(timerValue)
+    timeInput.value = formattedTime
+    timerNode.textContent = formattedTime
 }
 
 timeInput.addEventListener('keydown', captureInput)
 clearButton.addEventListener('click', clearTimer)
 startButton.addEventListener('click', startTimer)
 stopButton.addEventListener('click', stopTimer)
+toggleFullscreenButton.addEventListener('click', function(event) {
+    var displayNode = document.querySelector('.Display'),
+        className = 'Display--fullscreen'
+    if (event.target.checked) {
+        displayNode.classList.add(className)
+    } else {
+        displayNode.classList.remove(className)
+    }
+})

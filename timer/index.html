@@ -12,18 +12,29 @@
 </head>
 
 <body id="top">
-    <div class="App">
+    <div class="App App--Timer">
         <main>
-            <h1>Timer</h1>
-            <p>A customizable timer built for projectors</p>
-            <label id="time-input-label">
-                <span>Time</span>
-                <input type="text" id="time-input" value="00h 00m 00s">
-            </label>
-            <button id="start">Start timer</button>
-            <button id="stop">Stop timer</button>
-            <button id="clear">Clear timer</button>
+            <div class="ContentContainer">
+                <h1>Timer</h1>
+                <p>A customizable timer built for projectors</p>
+                <label id="time-input-label">
+                    <span>Time</span>
+                    <input type="text" id="time-input" value="00h 00m 00s">
+                </label>
+                <button id="start">Start timer</button>
+                <button id="stop">Stop timer</button>
+                <button id="clear">Clear timer</button>
+            </div>
         </main>
+        <section class="Display">
+            <div class="ContentContainer">
+                <h2 id="timer"></h2>
+                <label class="Checkbox">
+                    <input type="checkbox" id="toggle-fullscreen">
+                    <span>Fullscreen</span>
+                </label>
+            </div>
+        </section>
     </div>
     <script src="/register.js"></script>
     <script src="main.js"></script>
