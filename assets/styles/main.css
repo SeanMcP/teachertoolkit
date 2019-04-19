@@ -21,7 +21,7 @@ body {
     max-width: 1000px;
 }
 
-@media screen and (max-width: calc(1000px + 4rem)) {
+@media screen and (max-width: 1064px) {
     .ContentContainer {
         margin: 0 2rem;
         max-width: initial;
