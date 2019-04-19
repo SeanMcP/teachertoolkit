@@ -65,13 +65,13 @@ body {
     padding: 1rem;
 }
 
-.Card>*:first-child,
-.ContentContainer>*:first-child {
+.Card > *:first-child,
+.ContentContainer > *:first-child {
     margin-top: 0;
 }
 
-.Card>*:last-child,
-.ContentContainer>*:last-child {
+.Card > *:last-child,
+.ContentContainer > *:last-child {
     margin-bottom: 0;
 }
 

@@ -39,7 +39,8 @@
     width: calc(100% - 1rem);
 }
 
-.Settings__label input:focus, .ToTop:focus {
+.Settings__label input:focus,
+.ToTop:focus {
     box-shadow: 0 0 0 2px var(--amber600);
     outline: none;
 }
@@ -154,7 +155,7 @@
     .--desktop-hidden {
         display: block;
     }
-    
+
     .--mobile-hidden {
         display: none;
     }

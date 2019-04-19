@@ -1,43 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Timer - TeacherToolkit.org</title>
+        <meta
+            name="description"
+            content="A customizable timer built for projectors. Part of TeacherToolkit."
+        />
+        <meta
+            name="keywords"
+            content="teacher, educator, teach, teacher tools, teacher apps, teacher toolkit, timer, countdown timer, countdown clock"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            media="screen"
+            href="/assets/styles/main.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            media="screen"
+            href="styles.css"
+        />
+    </head>
 
-<head>
-    <meta charset="utf-8">
-    <title>Timer - TeacherToolkit.org</title>
-    <meta name="description" content="A customizable timer built for projectors. Part of TeacherToolkit.">
-    <meta name="keywords" content="teacher, educator, teach, teacher tools, teacher apps, teacher toolkit, timer, countdown timer, countdown clock">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="/assets/styles/main.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="styles.css">
-</head>
-
-<body id="top">
-    <div class="App App--Timer">
-        <main>
-            <div class="ContentContainer">
-                <h1>Timer</h1>
-                <p>A customizable timer built for projectors</p>
-                <label id="time-input-label">
-                    <span>Time</span>
-                    <input type="text" id="time-input" value="00h 00m 00s">
-                </label>
-                <button id="start">Start timer</button>
-                <button id="stop">Stop timer</button>
-                <button id="clear">Clear timer</button>
-            </div>
-        </main>
-        <section class="Display">
-            <div class="ContentContainer">
-                <h2 id="timer"></h2>
-                <label class="Checkbox">
-                    <input type="checkbox" id="toggle-fullscreen">
-                    <span>Fullscreen</span>
-                </label>
-            </div>
-        </section>
-    </div>
-    <script src="/register.js"></script>
-    <script src="main.js"></script>
-</body>
-
+    <body id="top">
+        <div class="App App--Timer">
+            <main>
+                <div class="ContentContainer">
+                    <h1>Timer</h1>
+                    <p>A customizable timer built for projectors</p>
+                    <label id="time-input-label">
+                        <span>Time</span>
+                        <input
+                            type="text"
+                            id="time-input"
+                            value="00h 00m 00s"
+                        />
+                    </label>
+                    <button id="start">Start timer</button>
+                    <button id="stop">Stop timer</button>
+                    <button id="clear">Clear timer</button>
+                </div>
+            </main>
+            <section class="Display">
+                <div class="ContentContainer">
+                    <h2 id="timer"></h2>
+                    <label class="Checkbox">
+                        <input type="checkbox" id="toggle-fullscreen" />
+                        <span>Fullscreen</span>
+                    </label>
+                </div>
+            </section>
+        </div>
+        <script src="/register.js"></script>
+        <script src="main.js"></script>
+    </body>
 </html>

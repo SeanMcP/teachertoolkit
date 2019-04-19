@@ -1,0 +1,24 @@
+{
+    "name": "teachertoolkit",
+    "version": "1.0.0",
+    "description": "A suite of productivity apps for educators",
+    "main": "register.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "format": "prettier --write '**/*.{html,css,js,json}'"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/SeanMcP/teachertoolkit.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/SeanMcP/teachertoolkit/issues"
+    },
+    "homepage": "https://github.com/SeanMcP/teachertoolkit#readme",
+    "devDependencies": {
+        "prettier": "^1.17.0"
+    }
+}
