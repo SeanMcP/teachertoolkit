@@ -125,11 +125,7 @@
         timerNode.textContent = formattedTime
     }
 
-    timeInput.addEventListener('keydown', captureInput)
-    clearButton.addEventListener('click', clearTimer)
-    startButton.addEventListener('click', startTimer)
-    stopButton.addEventListener('click', stopTimer)
-    toggleFullscreenButton.addEventListener('click', function(event) {
+    function toggleFullscreen(event) {
         var displayNode = document.querySelector('.Display'),
             className = 'Display--fullscreen'
         if (event.target.checked) {
@@ -137,5 +133,11 @@
         } else {
             displayNode.classList.remove(className)
         }
-    })
+    }
+
+    timeInput.addEventListener('keydown', captureInput)
+    clearButton.addEventListener('click', clearTimer)
+    startButton.addEventListener('click', startTimer)
+    stopButton.addEventListener('click', stopTimer)
+    toggleFullscreenButton.addEventListener('click', toggleFullscreen)
 })()
