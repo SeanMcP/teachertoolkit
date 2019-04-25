@@ -1,9 +1,9 @@
-.App {
+.app {
     display: flex;
     min-height: 100vh;
 }
 
-.Settings {
+.settings {
     background: var(--blue900);
     color: white;
     display: flex;
@@ -12,11 +12,11 @@
     width: 360px;
 }
 
-.Settings h1 {
+.settings h1 {
     margin-bottom: 0;
 }
 
-.Settings__content-container {
+.settings__content-container {
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -24,55 +24,55 @@
     position: relative;
 }
 
-.Settings__content-container > *:first-child {
+.settings__content-container > *:first-child {
     margin-top: 0;
 }
 
-.Settings__label {
+.settings__label {
     align-items: stretch;
     display: flex;
     flex-direction: column;
 }
 
-.Settings__label input {
+.settings__label input {
     /* Fix for Firefox */
     width: calc(100% - 1rem);
 }
 
-.Settings__label input:focus,
-.ToTop:focus {
+.settings__label input:focus,
+.to-top:focus {
     box-shadow: 0 0 0 2px var(--amber600);
     outline: none;
 }
 
-.Settings__label + .Settings__label {
+.settings__label + .settings__label {
     margin-top: 1rem;
 }
 
-.Attribution {
+.attribution {
     margin-top: auto;
     padding-top: 2rem;
     text-align: center;
 }
 
-.Attribution a {
+.attribution a {
     text-decoration: none;
 }
 
-.Attribution a:hover,
-.Attribution a:focus {
+.attribution a:hover,
+.attribution a:focus {
     text-decoration: underline;
 }
 
-.Attribution.--desktop-hidden a {
+.attribution.--desktop-hidden a {
     color: var(--text-primary);
 }
 
-.Attribution.--mobile-hidden a {
+.attribution.--mobile-hidden a {
     color: white;
 }
 
-.Main {
+.main {
     --background: var(--gray200);
     background: var(--background);
     flex: 1;
@@ -80,17 +80,17 @@
     overflow-y: auto;
 }
 
-.Main .Attribution {
+.main .attribution {
     padding-bottom: 2rem;
 }
 
-.GradeList {
+.grade-list {
     list-style-type: none;
     margin: 0;
     padding-left: 0;
 }
 
-.GradeList__item {
+.grade-list__item {
     display: flex;
     justify-content: center;
     font-size: 125%;
@@ -98,23 +98,23 @@
     padding: 0.5rem 1rem;
 }
 
-.GradeList__item:nth-child(even) {
+.grade-list__item:nth-child(even) {
     background: white;
 }
 
-.GradeList__value {
+.grade-list__value {
     text-align: right;
 }
 
-.GradeList__fraction {
+.grade-list__fraction {
     margin-right: 1rem;
 }
 
-.GradeList__percent {
+.grade-list__percent {
     font-weight: bold;
 }
 
-.ToTop {
+.to-top {
     background: var(--blue900);
     border-radius: var(--slight-radius);
     bottom: 1rem;
@@ -126,7 +126,7 @@
     right: 1rem;
 }
 
-.ToTop:hover {
+.to-top:hover {
     background: var(--blue700);
 }
 
@@ -139,16 +139,16 @@
 }
 
 @media screen and (max-width: 700px) {
-    .App {
+    .app {
         flex-direction: column;
     }
 
-    .Settings {
+    .settings {
         max-width: initial;
         width: 100%;
     }
 
-    .Main {
+    .main {
         max-height: initial;
     }
 

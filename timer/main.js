@@ -1,12 +1,12 @@
 ;(function() {
     'use strict'
 
-    var timeInput = document.getElementById('time-input')
+    var timeInput = document.getElementById('time_input')
     var clearButton = document.getElementById('clear')
     var startButton = document.getElementById('start')
     var stopButton = document.getElementById('stop')
     var timerNode = document.getElementById('timer')
-    var toggleFullscreenButton = document.getElementById('toggle-fullscreen')
+    var toggleFullscreenButton = document.getElementById('toggle_fullscreen')
 
     var isDone, isFullscreen, timer, timerValue
 
@@ -126,8 +126,8 @@
     }
 
     function toggleFullscreen(event) {
-        var displayNode = document.querySelector('.Display'),
-            className = 'Display--fullscreen'
+        var displayNode = document.querySelector('.display'),
+            className = 'display--fullscreen'
         if (event.target.checked) {
             displayNode.classList.add(className)
         } else {

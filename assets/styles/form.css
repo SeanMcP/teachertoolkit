@@ -15,7 +15,7 @@ input {
     padding: 0.5rem;
 }
 
-label.Checkbox > * {
+label.checkbox > * {
     display: inline;
     vertical-align: middle;
 }

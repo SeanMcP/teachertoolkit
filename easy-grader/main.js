@@ -1,7 +1,7 @@
 ;(function() {
-    var outputList = document.getElementById('outputList')
-    var problemsInput = document.getElementById('problemsInput')
-    var placesInput = document.getElementById('placesInput')
+    var outputList = document.getElementById('output_list')
+    var problemsInput = document.getElementById('problems_input')
+    var placesInput = document.getElementById('places_input')
 
     function generateTable() {
         clearErrors()
@@ -9,11 +9,11 @@
         var problems = problemsInput.value
         var places = placesInput.value
         if (problems.length === 0) {
-            displayErrorOn('problemsLabel')
+            displayErrorOn('problems_label')
             isError = true
         }
         if (places.length === 0) {
-            displayErrorOn('placesLabel')
+            displayErrorOn('places_label')
             isError = true
         }
         if (isError) {
@@ -25,12 +25,12 @@
         for (var i = 0; i <= problems; i++) {
             var value = problems - i
             var li = document.createElement('li')
-            li.classList.add('GradeList__item')
+            li.classList.add('grade-list__item')
 
             var fractionSpan = document.createElement('span')
             fractionSpan.classList.add(
-                'GradeList__value',
-                'GradeList__fraction'
+                'grade-list__value',
+                'grade-list__fraction'
             )
             fractionSpan.textContent = value + '/' + problems
             if (fractionSpanWidth) {
@@ -39,7 +39,7 @@
             li.appendChild(fractionSpan)
 
             var percentSpan = document.createElement('span')
-            percentSpan.classList.add('GradeList__value', 'GradeList__percent')
+            percentSpan.classList.add('grade-list__value', 'grade-list__percent')
             percentSpan.textContent =
                 ((100 * value) / problems).toFixed(places) + '%'
             if (percentSpanWidth) {

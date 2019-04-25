@@ -16,19 +16,19 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.ContentContainer {
+.content-container {
     margin: 0 auto;
     max-width: 1000px;
 }
 
 @media screen and (max-width: 1064px) {
-    .ContentContainer {
+    .content-container {
         margin: 0 2rem;
         max-width: initial;
     }
 }
 
-.Block {
+.block {
     padding: 2rem 0;
 }
 
@@ -50,53 +50,53 @@ body {
     color: white;
 }
 
-.Header {
+.header {
     border-bottom: 1px solid var(--gray300);
     text-align: center;
 }
 
-.Main {
+.main {
     flex: 1;
 }
 
-.Card {
+.card {
     border: 1px solid var(--gray300);
     border-radius: 0.25rem;
     padding: 1rem;
 }
 
-.Card > *:first-child,
-.ContentContainer > *:first-child {
+.card > *:first-child,
+.content-container > *:first-child {
     margin-top: 0;
 }
 
-.Card > *:last-child,
-.ContentContainer > *:last-child {
+.card > *:last-child,
+.content-container > *:last-child {
     margin-bottom: 0;
 }
 
-a.Card {
+a.card {
     color: var(--text-primary);
     text-decoration: none;
 }
 
-a.Card:focus,
-a.Card:hover {
+a.card:focus,
+a.card:hover {
     border-color: dodgerblue;
     box-shadow: 0 0 0 4px dodgerblue;
     outline: none;
 }
 
-.Banner--primary {
+.banner--primary {
     background: var(--primary);
     color: white;
 }
 
-.Banner--primary a {
+.banner--primary a {
     color: white;
 }
 
-.Footer {
+.footer {
     background: var(--dark);
     color: var(--text-alt);
     padding: 1rem 0;

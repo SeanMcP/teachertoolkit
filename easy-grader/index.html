@@ -27,40 +27,40 @@
     </head>
 
     <body id="top">
-        <div class="App">
-            <aside class="Settings">
-                <div class="Settings__content-container">
+        <div class="app">
+            <aside class="settings">
+                <div class="settings__content-container">
                     <h1>Easy Grader</h1>
                     <p>Quickly create a percent grade table for easy grading</p>
-                    <label id="problemsLabel" class="Settings__label">
+                    <label id="problems_label" class="settings__label">
                         <span>Number of problems</span>
                         <input
                             type="number"
-                            id="problemsInput"
+                            id="problems_input"
                             value="17"
                             min="1"
                             max="2000"
                         />
                     </label>
-                    <label id="placesLabel" class="Settings__label">
+                    <label id="places_label" class="settings__label">
                         <span>Number of decimal places</span>
                         <input
                             type="number"
-                            id="placesInput"
+                            id="places_input"
                             value="2"
                             min="0"
                             max="20"
                         />
                     </label>
-                    <footer class="Attribution --mobile-hidden">
+                    <footer class="attribution --mobile-hidden">
                         © <a href="/">TeacherToolkit.org</a>
                     </footer>
                 </div>
             </aside>
-            <main id="main" role="main" class="Main">
-                <ul id="outputList" class="GradeList"></ul>
-                <a href="#top" class="ToTop --desktop-hidden">Top</a>
-                <footer class="Attribution --desktop-hidden">
+            <main id="main" role="main" class="main">
+                <ul id="output_list" class="grade-list"></ul>
+                <a href="#top" class="to-top --desktop-hidden">Top</a>
+                <footer class="attribution --desktop-hidden">
                     © <a href="/">TeacherToolkit.org</a>
                 </footer>
             </main>
