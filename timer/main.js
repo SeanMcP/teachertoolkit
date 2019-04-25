@@ -4,11 +4,12 @@
     var timeInput = document.getElementById('time_input')
     var clearButton = document.getElementById('clear')
     var startButton = document.getElementById('start')
+    var resetButton = document.getElementById('reset')
     var stopButton = document.getElementById('stop')
     var timerNode = document.getElementById('timer')
     var toggleFullscreenButton = document.getElementById('toggle_fullscreen')
 
-    var isDone, isFullscreen, timer, timerValue
+    var initialTimeInputValue, isDone, isFullscreen, timer, timerValue
 
     timerNode.textContent = timeInput.value
 
@@ -105,6 +106,7 @@
     function startTimer() {
         isDone = false
         var inputValue = timeInput.value
+        initialTimeInputValue = inputValue
         timerValue = convertTimeStringToMs(inputValue)
         var formattedTime = formatTimeNumberAsString(timerValue)
         timeInput.value = formattedTime
@@ -113,16 +115,28 @@
         timer = setInterval(runTimer, 1000)
     }
 
+    // function restartTimer() {
+    //     timer = setInterval(runTimer, 1000)
+    // }
+
     function stopTimer() {
         clearInterval(timer)
     }
 
     function clearTimer() {
         stopTimer()
+        initialTimeInputValue = undefined
         timerValue = 0
         var formattedTime = formatTimeNumberAsString(timerValue)
         timeInput.value = formattedTime
         timerNode.textContent = formattedTime
+    }
+
+    function resetTimer() {
+        if (initialTimeInputValue) {
+            stopTimer()
+            timerNode.textContent = initialTimeInputValue
+        }
     }
 
     function toggleFullscreen(event) {
@@ -139,5 +153,6 @@
     clearButton.addEventListener('click', clearTimer)
     startButton.addEventListener('click', startTimer)
     stopButton.addEventListener('click', stopTimer)
+    resetButton.addEventListener('click', resetTimer)
     toggleFullscreenButton.addEventListener('click', toggleFullscreen)
 })()
