@@ -6,13 +6,13 @@
     URL: https://developers.google.com/web/fundamentals/primers/service-workers/
 */
 
-var CACHE_NAME = 'teacher-toolkit-v0';
+var CACHE_NAME = 'teacher-toolkit-v0.0.0';
 var urlsToCache = [
-    '/',
-    '/assets/styles/main.css',
-    '/easy-grader/index.html',
-    '/easy-grader/main.js',
-    '/easy-grader/styles.css'
+    './',
+    './assets/styles/main.css',
+    './easy-grader/index.html',
+    './easy-grader/main.js',
+    './easy-grader/styles.css'
 ];
 
 self.addEventListener('install', function(event) {
