@@ -21,3 +21,23 @@
 h2#timer {
     font-family: var(--mono);
 }
+
+.timer__label {
+    display: grid;
+    grid-gap: 0.25rem;
+}
+
+.timer__button-container {
+    display: grid;
+    grid-gap: 0.25rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.timer__button {
+    align-items: center;
+    display: flex;
+}
+
+.timer__button i {
+    margin-right: 0.25rem;
+}

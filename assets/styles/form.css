@@ -7,15 +7,28 @@ label > span {
     margin-bottom: 0.5rem;
 }
 
+button,
+input {
+    font-family: inherit;
+    font-size: inherit;
+}
+
 input {
     border-radius: var(--slight-radius);
     border: 1px solid var(--gray100);
-    font-family: inherit;
-    font-size: inherit;
     padding: 0.5rem;
 }
 
 label.checkbox > * {
     display: inline;
     vertical-align: middle;
+}
+
+button.button {
+    background: var(--gray600);
+    border: none;
+    border-radius: var(--slight-radius);
+    color: var(--text-alt);
+    cursor: pointer;
+    padding: 0.5rem;
 }
