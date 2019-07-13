@@ -114,22 +114,6 @@
     font-weight: bold;
 }
 
-.to-top {
-    background: var(--blue900);
-    border-radius: var(--slight-radius);
-    bottom: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-    color: white;
-    padding: 0.5rem 1rem;
-    position: fixed;
-    text-decoration: none;
-    right: 1rem;
-}
-
-.to-top:hover {
-    background: var(--blue700);
-}
-
 .--desktop-hidden {
     display: none;
 }

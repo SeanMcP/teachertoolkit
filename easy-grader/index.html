@@ -32,26 +32,38 @@
                 <div class="settings__content-container">
                     <h1>Easy Grader</h1>
                     <p>Quickly create a percent grade table for easy grading</p>
-                    <label id="problems_label" class="settings__label">
-                        <span>Number of problems</span>
+                    <div class="Field">
+                        <label for="problems_input" class="Label"
+                            >Number of problems</label
+                        >
                         <input
+                            class="Input"
                             type="number"
                             id="problems_input"
                             value="17"
                             min="1"
                             max="2000"
                         />
-                    </label>
-                    <label id="places_label" class="settings__label">
-                        <span>Number of decimal places</span>
+                    </div>
+                    <!-- <label id="problems_label" class="settings__label">
+                        <span>Number of problems</span>
+                    </label> -->
+                    <div class="Field">
+                        <label
+                            for="places_input"
+                            class="Label"
+                            id="places_label"
+                            >Number of decimal places
+                        </label>
                         <input
-                            type="number"
+                            type="text"
+                            class="Input"
                             id="places_input"
-                            value="2"
-                            min="0"
                             max="20"
+                            min="0"
+                            value="2"
                         />
-                    </label>
+                    </div>
                     <footer class="attribution --mobile-hidden">
                         © <a href="../">TeacherToolkit.org</a>
                     </footer>
@@ -59,7 +71,9 @@
             </aside>
             <main id="main" role="main" class="main">
                 <ul id="output_list" class="grade-list"></ul>
-                <a href="#top" class="to-top --desktop-hidden">Top</a>
+                <a href="#top" class="Button Fab Fab--right --desktop-hidden"
+                    >Top</a
+                >
                 <footer class="attribution --desktop-hidden">
                     © <a href="../">TeacherToolkit.org</a>
                 </footer>
