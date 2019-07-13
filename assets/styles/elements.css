@@ -1,6 +1,7 @@
 .Button.Fab {
     bottom: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    margin: 0;
     position: fixed;
 }
 
