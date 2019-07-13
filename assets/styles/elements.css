@@ -1,0 +1,13 @@
+.Button.Fab {
+    bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    position: fixed;
+}
+
+.Button.Fab--right {
+    right: 1rem;
+}
+
+.Button.Fab--left {
+    left: 1rem;
+}
