@@ -1,22 +1,7 @@
-label > * {
-    display: block;
-}
-
-label > span {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-}
-
 button,
 input {
     font-family: inherit;
     font-size: inherit;
-}
-
-input {
-    border-radius: var(--slight-radius);
-    border: 1px solid var(--gray100);
-    padding: 0.5rem;
 }
 
 label.checkbox > * {
@@ -24,11 +9,57 @@ label.checkbox > * {
     vertical-align: middle;
 }
 
-button.button {
-    background: var(--gray600);
-    border: none;
+/* Design System */
+
+.Button,
+.Input {
+    display: block;
+    margin: 1rem 0;
+}
+
+.Button {
+    background: var(--blue800);
+    border: 1px solid var(--blue800);
     border-radius: var(--slight-radius);
     color: var(--text-alt);
     cursor: pointer;
+    padding: 0.5rem 1rem;
+}
+
+.Button:hover,
+.Button:focus {
+    background: var(--blue900);
+}
+
+a.Button {
+    text-decoration: none;
+}
+
+.Field {
+    display: grid;
+}
+
+.Field.Field--inline {
+    grid-template-columns: max-content auto;
+}
+
+.Field + .Field {
+    margin-top: 1rem;
+}
+
+.Input {
+    border-radius: var(--slight-radius);
+    border: 1px solid var(--gray100);
+    display: block;
     padding: 0.5rem;
+}
+
+.Input:focus {
+    border-color: var(--blue600);
+    box-shadow: 0 0 0 2px var(--blue100);
+    outline: solid 4px transparent;
+}
+
+.Label {
+    font-weight: bold;
 }
