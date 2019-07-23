@@ -103,3 +103,26 @@ a.card:hover {
     color: var(--text-alt);
     padding: 1rem 0;
 }
+
+.tt-banner {
+    background: var(--dark);
+    color: var(--text-alt);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.tt-banner__icon {
+    margin-right: 0.25rem;
+}
+
+.tt-banner__link {
+    color: var(--text-alt);
+}
+
+.tt-banner__link:not(:hover) {
+    text-decoration: none;
+}
+
+.tt-banner:focus {
+    box-shadow: 0 0 0 2px var(--text-alt);
+}
