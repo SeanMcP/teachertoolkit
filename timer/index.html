@@ -41,61 +41,63 @@
         </header>
         <div class="app app--timer">
             <main>
-                <div class="content-container">
-                    <h1>Timer</h1>
-                    <p>A customizable timer built for projectors</p>
-                    <label class="timer__label">
-                        <span>Time</span>
-                        <input
-                            type="text"
-                            class="Input"
-                            id="time_input"
-                            value="00h 00m 00s"
-                        />
-                    </label>
-                    <div class="timer__button-container">
-                        <button class="Button timer__button" id="start">
-                            <i
-                                class="material-icons"
-                                role="img"
-                                aria-hidden="true"
-                            >
-                                play_arrow
-                            </i>
-                            Start
-                        </button>
-                        <button class="Button timer__button" id="stop">
-                            <i
-                                class="material-icons"
-                                role="img"
-                                aria-hidden="true"
-                            >
-                                stop
-                            </i>
-                            Stop
-                        </button>
-                        <button class="Button timer__button" id="reset">
-                            <i
-                                class="material-icons"
-                                role="img"
-                                aria-hidden="true"
-                            >
-                                refresh
-                            </i>
-                            Reset
-                        </button>
-                        <button class="Button timer__button" id="clear">
-                            <i
-                                class="material-icons"
-                                role="img"
-                                aria-hidden="true"
-                            >
-                                clear
-                            </i>
-                            Clear
-                        </button>
+                <header class="app__header">
+                    <div class="content-container">
+                        <h1>Timer</h1>
+                        <p>A customizable timer built for projectors</p>
+                        <div class="Field">
+                            <label for="time_input" class="Label">Time</label>
+                            <input
+                                type="text"
+                                class="Input"
+                                id="time_input"
+                                value="00h 00m 00s"
+                            />
+                        </div>
+                        <div class="timer__button-container">
+                            <button class="Button timer__button" id="start">
+                                <i
+                                    class="material-icons"
+                                    role="img"
+                                    aria-hidden="true"
+                                >
+                                    play_arrow
+                                </i>
+                                Start
+                            </button>
+                            <button class="Button timer__button" id="stop">
+                                <i
+                                    class="material-icons"
+                                    role="img"
+                                    aria-hidden="true"
+                                >
+                                    stop
+                                </i>
+                                Stop
+                            </button>
+                            <button class="Button timer__button" id="reset">
+                                <i
+                                    class="material-icons"
+                                    role="img"
+                                    aria-hidden="true"
+                                >
+                                    refresh
+                                </i>
+                                Reset
+                            </button>
+                            <button class="Button timer__button" id="clear">
+                                <i
+                                    class="material-icons"
+                                    role="img"
+                                    aria-hidden="true"
+                                >
+                                    clear
+                                </i>
+                                Clear
+                            </button>
+                        </div>
                     </div>
-                </div>
+                </header>
             </main>
             <section class="display">
                 <div class="content-container">

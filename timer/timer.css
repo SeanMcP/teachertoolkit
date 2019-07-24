@@ -4,6 +4,10 @@
     min-height: 100vh;
 }
 
+.app__header {
+    margin: 1rem 0;
+}
+
 .display {
     background: var(--gray200);
     border-radius: var(--slight-radius);
@@ -31,6 +35,7 @@ h2#timer {
     display: grid;
     grid-gap: 0.25rem;
     grid-template-columns: repeat(4, 1fr);
+    margin: 1rem 0;
 }
 
 .timer__button {
