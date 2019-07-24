@@ -14,7 +14,6 @@ label.checkbox > * {
 .Button,
 .Input {
     display: block;
-    margin: 1rem 0;
 }
 
 .Button {
@@ -45,6 +44,10 @@ a.Button {
 
 .Field + .Field {
     margin-top: 1rem;
+}
+
+.Field .Input {
+    margin-top: 0.5rem;
 }
 
 .Input {
